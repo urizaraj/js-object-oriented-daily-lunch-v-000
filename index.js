@@ -25,6 +25,12 @@ class Customer extends Model {
     this.name = name
     this.employerId = employer.id
   }
+
+  deliveries() {
+    store.deliveries.filter(d => {
+      return d.customerId === this.id
+    })
+  }
 }
 
 class Meal extends Model {
