@@ -70,9 +70,7 @@ class Delivery extends Model {
 
   customer() { return this.belongsTo('customerId', 'customers') }
 
-  meal() {
-    return this.belongsTo('mealId', 'meals')
-  }
+  meal() { return this.belongsTo('mealId', 'meals') }
 }
 
 class Employer extends Model {
