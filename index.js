@@ -99,8 +99,11 @@ class Employer extends Model {
     })
 
     let moreresults = []
-    for (let value of result) { moreresults.push(value)}
-    
+
+    Object.keys(result).forEach(key => {
+      moreresults.push(result[key])
+    })
+
     return moreresults
   }
 }
