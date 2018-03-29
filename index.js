@@ -29,13 +29,15 @@ class Customer extends Model {
 
 class Meal extends Model {
   constructor(title, price) {
+    super('meals')
     this.title = title
     this.price = price
   }
 }
 
-class Delivery {
+class Delivery extends Model {
   constructor(meal, customer) {
+    super('deliveries')
     this.mealId = meal.idea
     this.customerId = customer.id
   }
