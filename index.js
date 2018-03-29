@@ -1,11 +1,16 @@
-const ids = {
-  customer: 0
-  meal: 0
-}
+const ids = {}
+const store = {}
 
-const store = {
-  deliveries: []
-}
+models = [
+  'customers',
+  'meals',
+  'deliveries',
+]
+
+models.forEach(type => {
+  ids[type] = 0
+  store[type] = []
+})
 
 class Customer {
   constructor(name, employer) {
