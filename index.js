@@ -85,4 +85,5 @@ class Employer extends Model {
   }
 
   employees() {return this.hasMany('employerId', 'customers')}
+  deliveries() {retun this.hasManyThrough('deliveries', 'employees')}
 }
