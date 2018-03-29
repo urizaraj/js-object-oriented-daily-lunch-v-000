@@ -1,10 +1,10 @@
 const ids = {}
 const store = {}
-
 const models = [
   'customers',
   'meals',
   'deliveries',
+  'employers'
 ]
 
 models.forEach(type => {
