@@ -68,9 +68,7 @@ class Delivery extends Model {
     this.customerId = (customer ? customer.id : null)
   }
 
-  customer() {
-    return this.belongsTo('customerId', 'customers')
-  }
+  customer() { return this.belongsTo('customerId', 'customers') }
 
   meal() {
     return this.belongsTo('mealId', 'meals')
