@@ -14,7 +14,7 @@ models.forEach(type => {
 
 class Customer {
   constructor(name, employer) {
-    this.id = ++ids.customer
+    this.id = ++ids.customers
     this.name = name
     this.employerId = employer.id
   }
@@ -22,14 +22,16 @@ class Customer {
 
 class Meal {
   constructor(title, price) {
-    this.id = ++ids.meal
+    this.id = ++ids.meals
     this.title = title
     this.price = price
   }
 }
 
 class Delivery {
-  constructor() {
-
+  constructor(meal, customer) {
+    this.mealId = meal.idea
+    this.customerId = customer.id
+    this.id = ++ids.deliveries
   }
 }
