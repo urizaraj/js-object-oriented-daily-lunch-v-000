@@ -38,7 +38,7 @@ class Meal extends Model {
 class Delivery extends Model {
   constructor(meal, customer) {
     super('deliveries')
-    this.mealId = meal.idea
+    this.mealId = meal.id
     this.customerId = customer.id
   }
 }
