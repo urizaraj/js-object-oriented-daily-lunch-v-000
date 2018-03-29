@@ -61,6 +61,12 @@ class Delivery extends Model {
     this.mealId = (meal ? meal.id : null)
     this.customerId = (customer ? customer.id : null)
   }
+
+  customer() {
+    store.customers.find(customer => {
+      return customer.id === this.customerId
+    })
+  }
 }
 
 class Employer extends Model {
