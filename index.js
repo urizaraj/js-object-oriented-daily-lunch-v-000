@@ -27,9 +27,8 @@ class Customer extends Model {
   }
 }
 
-class Meal {
+class Meal extends Model {
   constructor(title, price) {
-    this.id = ++ids.meals
     this.title = title
     this.price = price
   }
