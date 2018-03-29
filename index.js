@@ -86,6 +86,7 @@ class Employer extends Model {
 
   employees() {return this.hasMany('employerId', 'customers')}
   deliveries() {
-    return this.hasManyThrough('deliveries', 'employees').flatten()
+    let del = this.hasManyThrough('deliveries', 'employees')
+    return [].concat(...del)
   }
 }
