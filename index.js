@@ -17,6 +17,12 @@ class Model {
     this.id = ++ids[type]
     store[type].push(this)
   }
+
+  single(type, plural) {
+    return store[plural].find(instance => {
+      return instance.id === this.type
+    })
+  }
 }
 
 class Customer extends Model {
