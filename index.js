@@ -83,4 +83,6 @@ class Employer extends Model {
     super('employers')
     this.name = name
   }
+
+  employees() {return this.hasMany('employerId', 'customers')}
 }
