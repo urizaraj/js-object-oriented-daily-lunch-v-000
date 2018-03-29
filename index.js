@@ -59,7 +59,7 @@ class Delivery extends Model {
   constructor(meal, customer) {
     super('deliveries')
     this.mealId = (meal ? meal.id : null)
-    this.customerId = customer.id
+    this.customerId = (customer ? customer.id : null)
   }
 }
 
