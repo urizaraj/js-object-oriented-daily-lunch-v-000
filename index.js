@@ -101,7 +101,7 @@ class Employer extends Model {
       // name = meal.name
       // result[] = 0
     // })
-    return Object.keys(result)
+    return Object.values(result)
     // return [].concat(...meals)
   }
 }
