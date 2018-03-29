@@ -39,5 +39,6 @@ class Delivery {
 class Model {
   constructor(type) {
     this.id = ++ids[type]
+    store[type].push(this)
   }
 }
