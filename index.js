@@ -41,7 +41,7 @@ class Customer extends Model {
   constructor(name, employer) {
     super('customers')
     this.name = name
-    // this.employerId = employer.id
+    this.employerId = (employer ? employer.id : null)
   }
 
   totalSpent() {}
