@@ -30,7 +30,11 @@ class Model {
     })
   }
 
-  hasManyThrough(typeId, plural, through)
+  hasManyThrough(type, through) {
+    return this[through]().map(instance => {
+      return instance[type]()
+    })
+  }
 }
 
 class Customer extends Model {
