@@ -1,9 +1,11 @@
 const ids = {
-  customers: 0
+  customer: 0
 }
 
 class Customer {
   constructor(name, employer) {
-    this.id = 
+    this.id = ++ids.customer
+    this.name = name
+    this.employerId = employer.id
   }
 }
