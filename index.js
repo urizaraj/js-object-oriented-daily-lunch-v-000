@@ -18,9 +18,9 @@ class Model {
     store[type].push(this)
   }
 
-  single(type, plural) {
+  belongsTo(typeId, plural) {
     return store[plural].find(instance => {
-      return instance.id === this[type]
+      return instance.id === this[typeId]
     })
   }
 }
@@ -69,9 +69,7 @@ class Delivery extends Model {
   }
 
   customer() {
-    store.customers.find(customer => {
-      return customer.id === this.customerId
-    })
+    return this.belongsTo('customerId', 'customers')
   }
 }
 
