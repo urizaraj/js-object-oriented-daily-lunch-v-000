@@ -27,8 +27,14 @@ class Customer extends Model {
   }
 
   deliveries() {
-    store.deliveries.filter(d => {
+    return store.deliveries.filter(d => {
       return d.customerId === this.id
+    })
+  }
+
+  meals() {
+    return this.deliveries().map(d => {
+      return d.meal()
     })
   }
 }
