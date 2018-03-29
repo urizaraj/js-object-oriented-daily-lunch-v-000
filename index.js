@@ -96,6 +96,7 @@ class Employer extends Model {
     // [].concat(...meals).forEach(meal => {
     //   result[meal.name] = 0
     // })
-    return Object.keys(result)
+    // return Object.keys(result)
+    return [].concat(...meals)
   }
 }
