@@ -47,7 +47,6 @@ class Customer extends Model {
   totalSpent() {}
 
   deliveries() { return this.hasMany('customerId', 'deliveries')}
-
   meals() { return this.hasManyThrough('meal', 'deliveries') }
 }
 
