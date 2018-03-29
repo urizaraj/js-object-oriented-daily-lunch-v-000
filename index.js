@@ -23,6 +23,12 @@ class Model {
       return instance.id === this[typeId]
     })
   }
+
+  hasMany(typeId, plural) {
+    return store[plural].filter(instance => {
+      return instance[typeId] === this.id
+    })
+  }
 }
 
 class Customer extends Model {
