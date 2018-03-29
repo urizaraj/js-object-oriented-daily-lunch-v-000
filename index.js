@@ -35,3 +35,9 @@ class Delivery {
     this.id = ++ids.deliveries
   }
 }
+
+class Model {
+  constructor(type) {
+    this.id = ++ids[type]
+  }
+}
