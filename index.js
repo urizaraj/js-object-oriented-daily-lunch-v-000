@@ -85,5 +85,7 @@ class Employer extends Model {
   }
 
   employees() {return this.hasMany('employerId', 'customers')}
-  deliveries() {return this.hasManyThrough('deliveries', 'employees')}
+  deliveries() {
+    return this.hasManyThrough('deliveries', 'employees').flatten()
+  }
 }
