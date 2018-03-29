@@ -47,7 +47,7 @@ class Meal extends Model {
   }
 
   static byPrice() {
-    return store.meals.slice().sort((a, b) {
+    return store.meals.slice().sort((a, b) => {
       return a - b
     })
   }
