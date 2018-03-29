@@ -106,4 +106,15 @@ class Employer extends Model {
 
     return moreresults
   }
+
+  mealTotals() {
+    let meals = this.hasManyThrough('meal', 'deliveries')
+    let result = {}
+    let a = [].concat(...meals)
+    a.forEach(meal => {
+      if (result[meal.id]) {result[meal.id]++} else {result[meal.id] = 1}
+    })
+
+    return result
+  }
 }
