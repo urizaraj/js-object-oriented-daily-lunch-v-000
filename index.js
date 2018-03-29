@@ -94,7 +94,7 @@ class Employer extends Model {
     let meals = this.hasManyThrough('meal', 'deliveries')
     let result = {}
     [].concat(...meals).forEach(meal => {
-      name = meal.name
+      // name = meal.name
       // result[] = 0
     })
     return Object.keys(result)
