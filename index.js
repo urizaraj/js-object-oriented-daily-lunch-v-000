@@ -20,7 +20,7 @@ class Model {
 
   single(type, plural) {
     return store[plural].find(instance => {
-      return instance.id === this.type
+      return instance.id === this[type]
     })
   }
 }
