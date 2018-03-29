@@ -42,3 +42,10 @@ class Delivery extends Model {
     this.customerId = customer.id
   }
 }
+
+class Employer extends Model {
+  constructor(name) {
+    super('employers')
+    this.name = name
+  }
+}
