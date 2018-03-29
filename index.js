@@ -12,9 +12,9 @@ models.forEach(type => {
   store[type] = []
 })
 
-class Customer {
+class Customer extends Model {
   constructor(name, employer) {
-    this.id = ++ids.customers
+    super('customers')
     this.name = name
     this.employerId = employer.id
   }
