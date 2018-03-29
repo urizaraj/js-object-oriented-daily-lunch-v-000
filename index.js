@@ -64,6 +64,7 @@ class Meal extends Model {
   }
 
   deliveries() {return this.hasMany('mealId', 'deliveries')}
+  customers() {return this.hasManyThrough('customer', 'deliveries')}
 }
 
 class Delivery extends Model {
