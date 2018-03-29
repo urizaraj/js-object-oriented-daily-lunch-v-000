@@ -29,6 +29,8 @@ class Model {
       return instance[typeId] === this.id
     })
   }
+
+  hasManyThrough(typeId, plural, through)
 }
 
 class Customer extends Model {
