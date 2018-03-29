@@ -1,5 +1,6 @@
 const ids = {
   customer: 0
+  meal: 0
 }
 
 const store = {
@@ -11,5 +12,17 @@ class Customer {
     this.id = ++ids.customer
     this.name = name
     this.employerId = employer.id
+  }
+}
+
+class Meal {
+  constructor(title, price) {
+    this.id = ++ids.meal
+  }
+}
+
+class Delivery {
+  constructor() {
+
   }
 }
