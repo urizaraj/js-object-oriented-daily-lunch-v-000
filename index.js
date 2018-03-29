@@ -62,6 +62,8 @@ class Meal extends Model {
       return b.price - a.price
     })
   }
+
+  deliveries() {return this.hasMany('mealId', 'deliveries')}
 }
 
 class Delivery extends Model {
