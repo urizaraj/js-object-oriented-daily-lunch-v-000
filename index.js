@@ -69,7 +69,6 @@ class Delivery extends Model {
   }
 
   customer() { return this.belongsTo('customerId', 'customers') }
-
   meal() { return this.belongsTo('mealId', 'meals') }
 }
 
