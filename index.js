@@ -48,11 +48,7 @@ class Customer extends Model {
 
   deliveries() { return this.hasMany('customerId', 'deliveries')}
 
-  meals() {
-    return this.deliveries().map(d => {
-      return d.meal()
-    })
-  }
+  meals() { return this.hasManyThrough('meal', 'deliveries') }
 }
 
 class Meal extends Model {
