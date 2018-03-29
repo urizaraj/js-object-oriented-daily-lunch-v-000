@@ -40,11 +40,7 @@ class Customer extends Model {
 
   totalSpent() {}
 
-  deliveries() {
-    return store.deliveries.filter(d => {
-      return d.customerId === this.id
-    })
-  }
+  deliveries() { return this.hasMany('customerId', 'deliveries')}
 
   meals() {
     return this.deliveries().map(d => {
