@@ -95,7 +95,7 @@ class Employer extends Model {
     let result = {}
     let a = [].concat(...meals)
     a.forEach(meal => {
-      let name = meal.name
+      result[meal.title] = 0
     })
     // .forEach(meal => {
       // name = meal.name
