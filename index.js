@@ -38,6 +38,5 @@ class Delivery {
   constructor(meal, customer) {
     this.mealId = meal.idea
     this.customerId = customer.id
-    this.id = ++ids.deliveries
   }
 }
