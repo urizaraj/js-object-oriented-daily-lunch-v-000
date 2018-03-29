@@ -1,7 +1,7 @@
 const ids = {}
 const store = {}
 
-models = [
+const models = [
   'customers',
   'meals',
   'deliveries',
