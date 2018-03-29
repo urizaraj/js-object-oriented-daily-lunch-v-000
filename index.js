@@ -18,6 +18,8 @@ class Customer {
 class Meal {
   constructor(title, price) {
     this.id = ++ids.meal
+    this.title = title
+    this.price = price
   }
 }
 
