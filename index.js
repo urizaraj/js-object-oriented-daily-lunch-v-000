@@ -97,11 +97,10 @@ class Employer extends Model {
     a.forEach(meal => {
       result[meal.title] = meal
     })
-    // .forEach(meal => {
-      // name = meal.name
-      // result[] = 0
-    // })
-    return Object.values(result)
-    // return [].concat(...meals)
+
+    let moreresults = []
+    for (let value of result) { moreresults.push(value)}
+    
+    return moreresults
   }
 }
