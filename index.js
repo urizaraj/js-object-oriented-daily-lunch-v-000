@@ -44,7 +44,11 @@ class Customer extends Model {
     this.employerId = (employer ? employer.id : null)
   }
 
-  totalSpent() {}
+  totalSpent() {
+    return this.meals().reduce((acc, cur) => {
+      return acc + cur.price
+    }, 0)
+  }
 
   deliveries() { return this.hasMany('customerId', 'deliveries')}
   meals() { return this.hasManyThrough('meal', 'deliveries') }
