@@ -46,7 +46,7 @@ class Meal extends Model {
     this.price = price
   }
 
-  static.byPrice() {
+  static byPrice() {
     return store.meals.slice().sort((a, b) {
       return a - b
     })
